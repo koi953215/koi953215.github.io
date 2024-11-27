@@ -81,6 +81,53 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
+    <tr onmouseout="moonsim_stop()" onmouseover="moonsim_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='moonsim_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/moonsim_teaser.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/moon_teaser.jpg' width="160">
+        </div>
+        <script type="text/javascript">
+          function moonsim_start() {
+            document.getElementById('moonsim_image').style.opacity = "1";
+          }
+
+          function moonsim_stop() {
+            document.getElementById('moonsim_image').style.opacity = "0";
+          }
+          moonsim_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://anonymousi079j.github.io/moonsim/">
+			<span class="papertitle">MoonSim: A Photorealistic Lunar Environment Simulator
+</span>
+        </a>
+        <br>
+				<strong>Ting-Hsuan Chen*</strong>, 
+        <a href="https://github.com/HenghuiB">Henghui Bao*</a>,
+        <a href="https://ziyc.github.io/">Ziyu Chen*</a>,
+        <a href="https://github.com/louhz">Haozhe Lou</a>, 
+				<a href="https://www.episodeyang.com/">Ge Yang</a>, 
+        <a href="https://zhiwenfan.github.io/">Zhiwen Fan</a>,
+        <a href="https://profiles.stanford.edu/marco-pavone">Marco Pavone</a>,
+        <a href="https://yuewang.xyz/">Yue Wang</a>,
+
+        <br>
+        <em>CVPR</em>, 2025 (under review) <img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
+        <br>
+        <a href="https://anonymousi079j.github.io/moonsim/">project page</a>
+        <p></p>
+        <p>
+          MoonSim is a photo-realistic lunar scene simulator that incorporates Unreal Engine for high-quality lunar images with realistic lighting and shadows and MuJoCo for physics simulation, supporting diverse locomotion and navigation tasks.
+        </p>
+      </td>
+    </tr>
+
+
     <tr onmouseout="narcan_stop()" onmouseover="narcan_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -129,7 +176,7 @@
           NaRCan, a video editing framework, integrates a hybrid deformation field network with diffusion priors to address the challenge of maintaining the canonical image as a natural image.
         </p>
       </td>
-    </tr>
+    </tr>    
 
 
     <tr onmouseout="DiffIR2VR_stop()" onmouseover="DiffIR2VR_start()">
@@ -166,7 +213,7 @@
         <a href="https://yulunalexliu.github.io/">Yu-Lun Liu</a>,
 
         <br>
-        <em>arXiv</em>, 2024
+        <em>ICLR</em>, 2025 (under review) <img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
         <br>
         <a href="https://jimmycv07.github.io/DiffIR2VR_web/">project page</a>
         /
