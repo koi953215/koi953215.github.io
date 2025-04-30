@@ -245,6 +245,45 @@
   </tbody></table>
   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+    <tr onmouseout="dreammesh_stop()" onmouseover="dreammesh_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='dreammesh_image'><video width=100% height=100% muted autoplay loop>
+          <source src="images/DreamMesh.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/DreamMesh.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function dreammesh_start() {
+            document.getElementById('dreammesh_image').style.opacity = "1";
+          }
+    
+          function dreammesh_stop() {
+            document.getElementById('dreammesh_image').style.opacity = "0";
+          }
+          dreammesh_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://github.com/koi953215/DreamMesh">
+          <span class="papertitle">DreamMesh</span>
+        </a>
+        <br>
+        <strong>Ting-Hsuan Chen</strong>,
+        <a href="https://cameronosmith.github.io/">Cameron Smith</a>,
+        <a href="https://pointscoder.github.io/">Jiageng Mao</a>,
+        <a href="https://dw1209.github.io/">Daniel Wang</a>,
+        <br>
+        <em>github</em>, 2025
+        <br>
+        <p></p>
+        <p>
+          A Blender plugin that transforms text or image inputs into complete 3D scenes with rigged objects, realistic AI-generated backgrounds, and intelligent object placement, all powered by generative AI.
+        </p>
+      </td>
+    </tr>
+    
     <tr bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
