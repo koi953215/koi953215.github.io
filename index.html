@@ -146,6 +146,61 @@
             <!-- Research Papers -->
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
+                <!-- Pantheon360 Paper -->
+                <tr onmouseout="pan360_stop()" onmouseover="pan360_start()">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='pan360_image'>
+                        <video width=100% height=100% muted autoplay loop>
+                          <source src="images/pantheon360.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src='images/pantheon360.jpg' width="160">
+                    </div>
+                    <script type="text/javascript">
+                      function pan360_start() {
+                        document.getElementById('pan360_image').style.opacity = "1";
+                      }
+                      function pan360_stop() {
+                        document.getElementById('pan360_image').style.opacity = "0";
+                      }
+                      pan360_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://koi953215.github.io/">
+                      <span class="papertitle">Pantheon360: Taming Digital Twin Generation via 3D-Aware 360° Video Diffusion</span>
+                    </a>
+                    <br>
+                    <strong>Ting-Hsuan Chen</strong>, 
+                    <a href="https://www.linkedin.com/in/ying-huan-chen-6902a9209/">Ying-Huan Chen</a>,
+                    <a href="https://ttaoretw.github.io/">Tao Tu</a>,
+                    <a href="https://jayinnn.dev/"> Jie-Ying Lee</a>,
+                    <a href="https://choyingw.github.io/">Cho-Ying Wu</a>,
+                    <a href="https://ark1234.github.io/">Fangzhou Lin</a>,
+                    <a href="https://henryzhangzhy.github.io/">Hengyuan Zhang</a>,
+                    <a href="https://avl.ucsd.edu/dfpazr/">David Paz</a>,
+                    <a href="https://scholar.google.com/citations?user=cL4bNBwAAAAJ&hl=zh-TW">Xinyu Huang</a>,
+                    <a href="https://yuliangguo.github.io/">Yuliang Guo</a>,
+                    <a href="https://yulunalexliu.github.io/">Yu-Lun Liu</a>,
+                    <a href="https://yuewang.xyz/">Yue Wang</a>,
+                    <a href="https://www.liu-ren.com/">Liu Ren</a>,
+                    <br>
+                    <em>under review</em><img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
+                    <br>
+                    <!-- <a href="https://arxiv.org/abs/2510.20335">arXiv</a>
+                    /
+                    <a href="https://github.com/ChampagneAndfragrance/Dino_Diffusion_Parking_Official">code</a> -->
+                    <p style="margin: 10px 0;">
+                    <!-- <a href="https://github.com/koi953215/NaRCan/stargazers">
+                      <img src="https://img.shields.io/github/stars/koi953215/NaRCan?style=social" alt="GitHub stars">
+                    </a> -->
+                    </p>
+                    Pantheon360 generates controllable 360° videos from sparse panoramic inputs. It reconstructs a 3D point cloud cache from the input frames and renders it along user-defined camera trajectories as a geometric scaffold. A video diffusion model then refines this scaffold into photorealistic output, ensuring both geometric consistency and visual quality.
+                  </td>
+                </tr>
+
                 <!-- Dino-Diffusion Paper -->
                 <tr onmouseout="dino_stop()" onmouseover="dino_start()">
                   <td style="padding:20px;width:25%;vertical-align:middle">
