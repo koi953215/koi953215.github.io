@@ -22,7 +22,7 @@
                     <p class="name" style="text-align: center;">
                       Ting-Hsuan Chen
                     </p>
-                    <p>I am an incoming Computer Science PhD student at the <a href="https://www.usc.edu/">University of Southern California</a>, advised by Professor <a href="https://yuewang.xyz/">Yue Wang</a>. I am honored to be supported by the <a href="https://china.usc.edu/usc-and-taiwan-partner-phd-fellowships"><strong>Viterbi School Taiwan Global Fellowship</strong></a>.
+                    <p>I am a first-year Computer Science PhD student at the <a href="https://www.usc.edu/">University of Southern California</a>, advised by Professor <a href="https://yuewang.xyz/">Yue Wang</a>. I am honored to be supported by the <a href="https://china.usc.edu/usc-and-taiwan-partner-phd-fellowships"><strong>Viterbi School Taiwan Global Fellowship</strong></a>.
                     </p>
                     <p>
                       I have previously worked as an R&D engineer at <a href="https://www.foxconn.com/zh-tw">Foxconn</a> and also served as a research assistant in Professor <a href="https://yulunalexliu.github.io/">Yu-Lun Liu's</a> laboratory at <a href="https://www.nycu.edu.tw/nycu/ch/index">National Yang Ming Chiao Tung University</a>. Currently, I am working at <a href="https://www.bosch.us/">Bosch</a> as a Research Intern focusing on Scene Understanding and Generative AI.
@@ -151,7 +151,7 @@
                   <td style="padding:20px;width:100%;vertical-align:middle">
                     <h2>Research</h2>
                     <p>
-                      I'm interested in computer vision, deep learning, generative AI, 3D reconstruction, autonomous agent, and robotics.
+                      I'm interested in computer vision, generative AI, and embodied AI. My current research centers on turning generative priors into physical intelligence: using <strong>video diffusion and world models</strong> to scale up robot data far beyond what teleoperation alone can collect, pushing generated content to respect real-world physics rather than merely look plausible, and repurposing the latent representations learned by large video diffusion and vision-language-action models to improve downstream embodied tasks such as robotic manipulation and humanoid control.
                     </p>
                   </td>
                 </tr>
@@ -161,6 +161,48 @@
             <!-- Research Papers -->
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
+                <!-- TimePre Paper -->
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/timepre.png' width="160">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2511.18539">
+                      <span class="papertitle">TimePre: Bridging Accuracy, Efficiency, and Stability in Probabilistic Time-Series Forecasting</span>
+                    </a>
+                    <br>
+                    <a href="https://scholar.google.com/citations?user=vVNJeeYAAAAJ&hl=en">Lingyu Jiang*</a>,
+                    <a href="https://scholar.google.com/citations?user=Z3rrHB0AAAAJ&hl=en">Lingyu Xu*</a>,
+                    <a href="https://www.linkedin.com/in/peiranli0930/">Peiran Li</a>,
+                    <a href="https://dengzhe-hou.github.io/">Dengzhe Hou</a>,
+                    <a href="https://scholar.google.com/citations?user=uvAVN4kAAAAJ&hl=en">Qianwen Ge</a>,
+                    <a href="https://zhuangdingyi.github.io/">Dingyi Zhuang</a>,
+                    <a href="https://shuoxing98.github.io/">Shuo Xing</a>,
+                    <a href="https://momofodr.github.io/">Wenjing Chen</a>,
+                    <a href="https://www.xiangbogao.com/">Xiangbo Gao</a>,
+                    <strong>Ting-Hsuan Chen</strong>,
+                    <a href="https://sakura-love999.github.io/">Xueying Zhan</a>,
+                    <a href="https://xinzhang525.netlify.app/">Xin Zhang</a>,
+                    <a href="https://www.wpi.edu/people/faculty/zzhang15">Ziming Zhang</a>,
+                    <a href="https://vztu.github.io/">Zhengzhong Tu</a>,
+                    <a href="https://openreview.net/profile?id=%7EMichael_Zielewski1">Michael Zielewski</a>,
+                    <a href="https://scholar.google.com/citations?user=muiCiHkAAAAJ&hl=ja">Kazunori Yamada</a>,
+                    <a href="https://ark1234.github.io/">Fangzhou Lin</a>,
+                    <br>
+                    <em>TMLR</em>, 2026 <img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
+                    <span style="color: gray; font-size: 0.9em; margin-left: 8px;">
+                      *: Equal contribution
+                    </span>
+                    <br>
+                    <a href="https://arxiv.org/abs/2511.18539">arXiv</a>
+                    <p style="margin: 10px 0;">
+                    </p>
+                    TimePre unifies the efficiency of MLP-based models with the distributional flexibility of Multiple Choice Learning for probabilistic time-series forecasting. Its core component, Stabilized Instance Normalization (SIN), corrects channel-wise statistical shifts to resolve catastrophic hypothesis collapse, achieving state-of-the-art accuracy with inference orders of magnitude faster than sampling-based models.
+                  </td>
+                </tr>
+
                 <!-- Pantheon360 Paper -->
                 <tr onmouseout="pan360_stop()" onmouseover="pan360_start()" bgcolor="#ffffd0">
                   <td style="padding:20px;width:25%;vertical-align:middle">
@@ -207,9 +249,9 @@
                       *: Equal contribution &nbsp; †: Equal advising
                     </span>
                     <br>
-                    <!-- <a href="https://arxiv.org/abs/2510.20335">arXiv</a>
+                    <a href="https://koi953215.github.io/pantheon360_page/">project page</a>
                     /
-                    <a href="https://github.com/ChampagneAndfragrance/Dino_Diffusion_Parking_Official">code</a> -->
+                    <a href="https://arxiv.org/abs/2605.25449">arXiv</a>
                     <p style="margin: 10px 0;">
                     <!-- <a href="https://github.com/koi953215/NaRCan/stargazers">
                       <img src="https://img.shields.io/github/stars/koi953215/NaRCan?style=social" alt="GitHub stars">
@@ -305,6 +347,9 @@
                     <a href="https://yuewang.xyz/">Yue Wang</a>,
                     <br>
                     <em>under review</em><img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
+                    <span style="color: gray; font-size: 0.9em; margin-left: 8px;">
+                      *: Equal contribution
+                    </span>
                     <br>
                     <a href="https://anonymousi079j.github.io/moonsim/">project page</a>
                     <p></p>
@@ -548,7 +593,7 @@
             <!-- Professional Experience Items -->
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
-                <!-- USC Geometry, Vision, and Learning Lab -->
+                <!-- PSI Lab -->
                 <tr bgcolor="#ffffd0">
                   <td style="padding:20px;width:25%;vertical-align:middle">
                     <div class="one">
@@ -556,7 +601,7 @@
                     </div>
                   </td>
                   <td style="padding:20px;width:75%;vertical-align:middle">
-                    <span class="papertitle">MS Student & Research Assistant</span>
+                    <span class="papertitle">PhD Student; MS Student & Research Assistant</span>
                     <br>
                     <a href="https://psi-lab.ai/">Physical Superintelligence Lab</a>, Los Angeles, California, USA
                     <br>
@@ -564,7 +609,7 @@
                     <br>
                     <p></p>
                     <p>
-                      At Physical Superintelligence (PSI) Lab, I explore diffusion models as priors to improve 3D reconstruction quality and enable 3D scene editing. I also conduct research on humanoid robots and develop physics-based robotics simulators to bridge the sim-to-real gap.
+                      At Physical Superintelligence (PSI) Lab, advised by Professor <a href="https://yuewang.xyz/">Yue Wang</a>, I work on video diffusion and world models for embodied intelligence: synthesizing physically consistent robot data at scale, and leveraging the latent representations of large generative models to improve downstream tasks such as robotic manipulation and humanoid control. I completed my MS here in May 2026 and am continuing for my PhD.
                     </p>
                   </td>
                 </tr>
@@ -585,7 +630,7 @@
                     <br>
                     <p></p>
                     <p>
-                      Working on cutting-edge research in scene understanding and generative AI technologies. Collaborating with the research team to develop innovative solutions for computer vision applications.
+                      At Bosch Center for AI, I work on generative models for scene understanding and autonomous driving. Both Pantheon360 (CVPR 2026) and Dino-Diffusion were developed here. I am also working on two ongoing projects: one improves controllable driving behavior simulation, where current models follow high-level control conditions such as goal and sketch prompts but often do so at the cost of safety and realism; the other explores object-centric video generation, targeting more accurate physics and stronger generalization to unseen objects and scenes.
                     </p>
                   </td>
                 </tr>
