@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="embodied/embodied.css">
   </head>
 
   <body>
@@ -151,7 +152,7 @@
                   <td style="padding:20px;width:100%;vertical-align:middle">
                     <h2>Research</h2>
                     <p>
-                      I'm interested in computer vision, generative AI, and embodied AI. My current research centers on turning generative priors into physical intelligence: using <strong>video diffusion and world models</strong> to scale up robot data far beyond what teleoperation alone can collect, pushing generated content to respect real-world physics rather than merely look plausible, and repurposing the latent representations learned by large video diffusion and vision-language-action models to improve downstream embodied tasks such as robotic manipulation and humanoid control.
+                      I'm interested in computer vision, generative AI, and embodied AI. My research uses <strong>video diffusion and world models</strong> to scale robot data beyond what teleoperation can collect, and to make generated content obey real-world physics rather than merely look plausible. I am particularly interested in how these models turn prediction into action: whether futures are rolled out in pixel space or predicted in a compact latent space, and whether actions are recovered by a separate inverse dynamics expert, by denoising video and action tokens jointly, or by using the backbone as a representation extractor. I also work on <strong>multi-agent embodied systems</strong>, where policies must generalize to unseen situations and coordinate with other agents.
                     </p>
                   </td>
                 </tr>
@@ -719,5 +720,6 @@
         </tr>
       </tbody>
     </table>
+    <script src="embodied/embodied.js" defer></script>
   </body>
 </html>

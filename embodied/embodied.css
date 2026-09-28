@@ -1,0 +1,193 @@
+/* Side-gutter decorations. Hidden unless both gutters are at least 200px wide. */
+
+.wm-rail,
+.wm-robot,
+.wm-arm,
+.wm-caption {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .wm-rail {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: fixed;
+    /* sits just above the shared floor line (64px from the bottom, see FLOOR_PX in
+       embodied.js) so the arm can stand on the floor and still reach every waypoint */
+    bottom: 136px;
+    right: calc(50% + 400px + 36px);
+    z-index: 1;
+  }
+
+  /* trajectory drawn behind the waypoints */
+  .wm-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .wm-planned,
+  .wm-executed,
+  .wm-measure,
+  .wm-branch {
+    fill: none;
+  }
+
+  .wm-planned {
+    stroke: rgba(23, 114, 208, 0.35);
+    stroke-width: 1.2;
+    stroke-dasharray: 2 5;
+    stroke-linecap: round;
+    animation: wm-flow 1.6s linear infinite;
+  }
+
+  .wm-executed {
+    stroke: #1772d0;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+  }
+
+  .wm-measure {
+    stroke: none;
+  }
+
+  /* sampled rollouts fanning out ahead of the agent */
+  .wm-branch {
+    stroke: rgba(240, 146, 40, 0.45);
+    stroke-width: 1;
+    stroke-dasharray: 1.5 2.5;
+    stroke-linecap: round;
+  }
+
+  .wm-branch-tip {
+    fill: rgba(240, 146, 40, 0.6);
+  }
+
+  .wm-agent {
+    fill: #f09228;
+    stroke: rgba(240, 146, 40, 0.25);
+    stroke-width: 6;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  /* dot first, label after: the arm reaches the dots from the left without crossing text */
+  .wm-waypoint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 13px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #9aa3ad;
+    transition: color .2s ease-in-out;
+  }
+
+  .wm-waypoint:hover,
+  .wm-waypoint:focus-visible,
+  .wm-waypoint.is-active {
+    color: #1772d0;
+  }
+
+  .wm-waypoint:focus-visible {
+    outline: 2px solid #1772d0;
+    outline-offset: 3px;
+  }
+
+  .wm-dot {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    margin-left: 1px;
+    border: 1.5px solid #9aa3ad;
+    border-radius: 50%;
+    background: #fff;
+    transition: border-color .2s ease-in-out, background .2s ease-in-out;
+  }
+
+  .wm-waypoint.is-passed .wm-dot {
+    border-color: #1772d0;
+    background: rgba(23, 114, 208, 0.35);
+  }
+
+  .wm-waypoint.is-active .wm-dot,
+  .wm-waypoint:hover .wm-dot {
+    border-color: #1772d0;
+    background: #1772d0;
+  }
+
+  .wm-robot {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: calc(50% + 400px);
+    z-index: 0;
+    cursor: grab;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .wm-arm {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* status line under the robot: "imagining 3 futures…", "acting: wave", hints */
+  .wm-caption {
+    display: block;
+    position: fixed;
+    left: calc(50% + 400px);
+    right: 0;
+    top: 80%;
+    text-align: center;
+    font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: #8a939d;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease-in-out;
+  }
+
+  .wm-caption.is-visible {
+    opacity: 1;
+  }
+}
+
+@keyframes wm-flow {
+  to {
+    stroke-dashoffset: -7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wm-waypoint,
+  .wm-dot,
+  .wm-agent,
+  .wm-caption {
+    transition: none;
+  }
+
+  .wm-planned {
+    animation: none;
+  }
+}
+
+@media (min-width: 1360px) {
+  .wm-arm {
+    display: block;
+  }
+}
