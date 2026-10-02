@@ -5,7 +5,11 @@
     <title>Ting-Hsuan Chen</title>
     <meta name="author" content="Ting-Hsuan Chen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" type="text/css" href="embodied/embodied.css">
   </head>
@@ -162,6 +166,98 @@
             <!-- Research Papers -->
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
+                <!-- PwP Paper -->
+                <tr onmouseout="pwp_stop()" onmouseover="pwp_start()" bgcolor="#ffffd0">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='pwp_image'>
+                        <video width=100% height=100% muted autoplay loop>
+                          <source src="images/pwp.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src='images/pwp.jpg' width="160">
+                    </div>
+                    <script type="text/javascript">
+                      function pwp_start() {
+                        document.getElementById('pwp_image').style.opacity = "1";
+                      }
+                      function pwp_stop() {
+                        document.getElementById('pwp_image').style.opacity = "0";
+                      }
+                      pwp_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://anonymoususer020.github.io/PwP_page/">
+                      <span class="papertitle">PwP: Panoramas without Panoramas<br>Camera-Controlled 360° Video from Any View via Perspective-Only Adaptation</span>
+                    </a>
+                    <br>
+                    <strong>Ting-Hsuan Chen*</strong>,
+                    <a href="https://www.linkedin.com/in/louisonlu/">Louison Lu*</a>,
+                    Qi Pan*,
+                    <a href="https://henryzhangzhy.github.io/">Hengyuan Zhang</a>,
+                    <a href="https://scholar.google.com/citations?user=cL4bNBwAAAAJ&hl=zh-TW">Xinyu Huang</a>,
+                    <a href="https://choyingw.github.io/">Cho-Ying Wu</a>,
+                    <a href="https://yuewang.xyz/">Yue Wang</a>,
+                    <a href="https://www.liu-ren.com/">Liu Ren</a>,
+                    <br>
+                    <em>under review</em><img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
+                    <span style="color: gray; font-size: 0.9em; margin-left: 8px;">
+                      *: Equal contribution
+                    </span>
+                    <br>
+                    <a href="https://anonymoususer020.github.io/PwP_page/">project page</a>
+                    <p style="margin: 10px 0;">
+                    </p>
+                    PwP generates camera-controlled 360° videos from any initial observation, from a single perspective view to multiple views or a full panorama, without requiring panoramic recordings in the target domain. It learns a panoramic prior from curated 360° videos, then adapts it using only abundant perspective multi-view videos projected into partial panoramas, with rendered point clouds steering the camera trajectory.
+                  </td>
+                </tr>
+
+                <!-- CoLM Paper -->
+                <tr onmouseout="colm_stop()" onmouseover="colm_start()" bgcolor="#ffffd0">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='colm_image'>
+                        <video width=100% height=100% muted autoplay loop>
+                          <source src="images/colm.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src='images/colm.jpg' width="160">
+                    </div>
+                    <script type="text/javascript">
+                      function colm_start() {
+                        document.getElementById('colm_image').style.opacity = "1";
+                      }
+                      function colm_stop() {
+                        document.getElementById('colm_image').style.opacity = "0";
+                      }
+                      colm_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://anonymous.4open.science/w/CoLM-website/">
+                      <span class="papertitle">CoLM: Controllable Text-Driven Humanoid Loco-Manipulation Generation</span>
+                    </a>
+                    <br>
+                    <a href="https://hanjiang.site/">Han Jiang*</a>,
+                    <a href="https://sihengz02.github.io/">Siheng Zhao*</a>,
+                    <strong>Ting-Hsuan Chen</strong>,
+                    <a href="https://yuewang.xyz/">Yue Wang</a>,
+                    <br>
+                    <em>under review</em><img src="images/fire-joypixels.gif" width="20" height="20" style="opacity: 0;">
+                    <span style="color: gray; font-size: 0.9em; margin-left: 8px;">
+                      *: Equal contribution
+                    </span>
+                    <br>
+                    <a href="https://anonymous.4open.science/w/CoLM-website/">project page</a>
+                    <p style="margin: 10px 0;">
+                    </p>
+                    CoLM generates humanoid loco-manipulation from language and explicit object-level spatial constraints, jointly producing humanoid and object motion with control ranging from a target object pose to a full trajectory. An interaction field shared across generation and execution keeps contacts consistent, and the generated motions are executed on a real Unitree G1 humanoid.
+                  </td>
+                </tr>
+
                 <!-- TimePre Paper -->
                 <tr>
                   <td style="padding:20px;width:25%;vertical-align:middle">
